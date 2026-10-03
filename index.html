@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OM TRADERS - All Kinds of Packing Material</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Glowing background animation */
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(234, 179, 8, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.1) 0%, transparent 60%);
+        }
+
+        /* Glassmorphism Card Style */
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: all 0.4s ease-in-out;
+        }
+
+        /* Glowing Border Cards */
+        .glow-card-blue {
+            position: relative;
+        }
+        .glow-card-blue::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #3b82f6);
+            border-radius: 1rem;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.6;
+            transition: opacity 0.4s ease;
+        }
+        .glow-card-blue:hover::before {
+            opacity: 1;
+        }
+
+        .glow-card-gold {
+            position: relative;
+        }
+        .glow-card-gold::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #eab308, #f97316, #eab308);
+            border-radius: 1.5rem;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.85;
+            animation: pulseGlow 3s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                filter: blur(8px);
+                opacity: 0.7;
+            }
+            100% {
+                filter: blur(14px);
+                opacity: 1;
+            }
+        }
+
+        /* Glowing text effects */
+        .neon-text-blue {
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.6), 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+        .neon-text-gold {
+            text-shadow: 0 0 10px rgba(234, 179, 8, 0.6), 0 0 20px rgba(234, 179, 8, 0.4);
+        }
+
+        /* Hover Zooming for Product Images */
+        .product-img-wrapper img {
+            transition: transform 0.5s ease;
+        }
+        .glass-card:hover .product-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER / BRANDING SECTION -->
+    <header class="w-full pt-8 pb-4 px-4 sm:px-8 max-w-7xl mx-auto">
+        <div class="glass-card glow-card-blue rounded-2xl p-6 md:p-8 text-center relative overflow-hidden">
+            <!-- Decorative badge -->
+            <div class="inline-block bg-blue-600/30 text-blue-400 border border-blue-500/40 text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full mb-3 tracking-wider uppercase">
+                <i class="fa-solid fa-boxes-packing mr-1"></i> Packing Material Manufacturer & Wholesale Supplier
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-wide mb-2 neon-text-blue">
+                OM TRADERS
+            </h1>
+            
+            <p class="text-yellow-400 font-semibold text-sm sm:text-lg max-w-3xl mx-auto mb-6">
+                Deals in: All Kinds of Packing Material (LD, PP, HM, BOPP, Rubber Band, Elfy, Strap, Sutli, Elastic, Cotton Tape, Marker, Gloves, PVC Dori, Butter Paper, Timer, Tagpin, Shoe Lifter & Gatta)
+            </p>
+
+            <!-- CONTACT CARDS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mt-4">
+                <a href="tel:9716804520" class="flex items-center justify-between p-3.5 rounded-xl bg-gray-800/80 hover:bg-blue-900/40 border border-gray-700 hover:border-blue-500 transition duration-300">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-xs text-gray-400">SUMIT GARG</p>
+                            <p class="text-sm font-bold text-white">+91 97168 04520</p>
+                        </div>
+                    </div>
+                    <span class="text-blue-400 text-xs font-semibold bg-blue-500/10 px-2.5 py-1 rounded-md">Call <i class="fa-solid fa-phone text-xs"></i></span>
+                </a>
+
+                <a href="tel:9210882784" class="flex items-center justify-between p-3.5 rounded-xl bg-gray-800/80 hover:bg-blue-900/40 border border-gray-700 hover:border-blue-500 transition duration-300">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-400">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-xs text-gray-400">KRISHAN KUMAR</p>
+                            <p class="text-sm font-bold text-white">+91 92108 82784</p>
+                        </div>
+                    </div>
+                    <span class="text-yellow-400 text-xs font-semibold bg-yellow-500/10 px-2.5 py-1 rounded-md">Call <i class="fa-solid fa-phone text-xs"></i></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT: CENTER QR SCAN & PAYMENT CARD -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-8 my-6 flex-grow">
+        <section class="max-w-md mx-auto my-8">
+            <div class="glass-card glow-card-gold rounded-3xl p-6 sm:p-8 text-center relative">
+                
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-500 to-orange-500 text-gray-950 font-extrabold text-xs uppercase px-5 py-1.5 rounded-full shadow-lg border border-yellow-300 tracking-wider flex items-center space-x-1">
+                    <i class="fa-solid fa-qrcode"></i>
+                    <span>Official Payment QR</span>
+                </div>
+
+                <div class="mt-3 mb-4">
+                    <h2 class="text-2xl font-black text-white tracking-wide">SCAN & PAY NOW</h2>
+                    <p class="text-xs text-gray-300">Paytm / Google Pay / PhonePe / Any UPI App</p>
+                </div>
+
+                <!-- QR CODE IMAGE CONTAINER -->
+                <div class="bg-white p-4 rounded-2xl shadow-2xl inline-block border-4 border-yellow-400/30 relative my-2 group">
+                    
+                    <!-- ================================================================= -->
+                    <!-- ⬇️ REPLACE YOUR QR CODE IMAGE URL INSIDE THE 'src' ATTRIBUTE BELOW ⬇️ -->
+                    <!-- ================================================================= -->
+                    <img id="qr-code-img" 
+                         src="https://placehold.co/300x300/1e293b/f59e0b?text=PASTE+YOUR+QR+CODE+HERE" 
+                         alt="OM TRADERS UPI QR CODE" 
+                         class="w-60 h-60 sm:w-64 sm:h-64 object-contain rounded-lg mx-auto shadow-md transition-transform duration-300 group-hover:scale-105">
+                    
+                    <!-- CENTER LOGO ON QR CODE OVERLAY -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="bg-blue-900 border-2 border-yellow-400 rounded-full px-2.5 py-1 text-[10px] font-black text-yellow-400 shadow-xl opacity-90">
+                            OM TRADERS
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QUICK ACTION BUTTONS UNDER QR CODE -->
+                <div class="mt-6 space-y-3">
+                    <a href="https://maps.google.com" target="_blank" id="review-btn" class="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-950 font-bold py-3 px-4 rounded-xl shadow-lg transition duration-300 transform active:scale-95">
+                        <i class="fa-solid fa-star text-base"></i>
+                        <span>Rate Us / Google Map Review</span>
+                    </a>
+
+                    <a href="https://wa.me/919716804520?text=Hello%20OM%20Traders,%20I%20have%20a%20query%20regarding%20packing%20materials." target="_blank" class="w-full flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg transition duration-300 transform active:scale-95">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Payment Screenshot</span>
+                    </a>
+                </div>
+
+                <p class="text-[11px] text-gray-400 mt-4 italic">
+                    <i class="fa-solid fa-shield-halved text-yellow-400 mr-1"></i> Verified Merchant Account - OM TRADERS
+                </p>
+            </div>
+        </section>
+
+        <!-- PRODUCTS GALLERY SECTION -->
+        <section class="mt-14 mb-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-wide neon-text-blue">
+                    OUR FEATURED PRODUCTS
+                </h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mt-2 rounded-full"></div>
+                <p class="text-gray-400 text-sm mt-2">High Quality Wholesale Packing Supplies</p>
+            </div>
+
+            <!-- PRODUCT CARDS GRID -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <!-- PRODUCT 1: RUBBER BAND -->
+                <div class="glass-card rounded-2xl p-4 text-center flex flex-col justify-between hover:border-blue-500/50">
+                    <div class="product-img-wrapper bg-gray-900/80 rounded-xl p-2 mb-3 overflow-hidden h-36 flex items-center justify-center">
+                        <!-- PRODUCT IMAGE URL HERE -->
+                        <img src="https://placehold.co/200x200/1e293b/38bdf8?text=Rubber+Band" alt="Rubber Band" class="max-h-full object-contain">
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Rubber Band</h3>
+                        <p class="text-xs text-gray-400 mt-1">Century & Premium Grades</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 2: ELFY & ADHESIVES -->
+                <div class="glass-card rounded-2xl p-4 text-center flex flex-col justify-between hover:border-blue-500/50">
+                    <div class="product-img-wrapper bg-gray-900/80 rounded-xl p-2 mb-3 overflow-hidden h-36 flex items-center justify-center">
+                        <!-- PRODUCT IMAGE URL HERE -->
+                        <img src="https://placehold.co/200x200/1e293b/38bdf8?text=Elfy+%26+Adhesive" alt="Elfy & Adhesives" class="max-h-full object-contain">
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Elfy & Adhesives</h3>
+                        <p class="text-xs text-gray-400 mt-1">Instant Super Glue & OM Adhesive</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 3: TAPES -->
+                <div class="glass-card rounded-2xl p-4 text-center flex flex-col justify-between hover:border-blue-500/50">
+                    <div class="product-img-wrapper bg-gray-900/80 rounded-xl p-2 mb-3 overflow-hidden h-36 flex items-center justify-center">
+                        <!-- PRODUCT IMAGE URL HERE -->
+                        <img src="https://placehold.co/200x200/1e293b/38bdf8?text=Packing+Tapes" alt="Tapes" class="max-h-full object-contain">
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Packing Tapes</h3>
+                        <p class="text-xs text-gray-400 mt-1">BOPP, Brown & Transparent Tapes</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 4: TAGPIN -->
+                <div class="glass-card rounded-2xl p-4 text-center flex flex-col justify-between hover:border-blue-500/50">
+                    <div class="product-img-wrapper bg-gray-900/80 rounded-xl p-2 mb-3 overflow-hidden h-36 flex items-center justify-center">
+                        <!-- PRODUCT IMAGE URL HERE -->
+                        <img src="https://placehold.co/200x200/1e293b/38bdf8?text=Tagpin" alt="Tagpin" class="max-h-full object-contain">
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Tagpin & Guns</h3>
+                        <p class="text-xs text-gray-400 mt-1">Standard & Premium Garment Tagpins</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 5: SUTLI -->
+                <div class="glass-card rounded-2xl p-4 text-center flex flex-col justify-between hover:border-blue-500/50">
+                    <div class="product-img-wrapper bg-gray-900/80 rounded-xl p-2 mb-3 overflow-hidden h-36 flex items-center justify-center">
+                        <!-- PRODUCT IMAGE URL HERE -->
+                        <img src="https://placehold.co/200x200/1e293b/38bdf8?text=Sutli" alt="Sutli" class="max-h-full object-contain">
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Plastic & Cotton Sutli</h3>
+                        <p class="text-xs text-gray-400 mt-1">High Strength Tying Twine</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 6: SHOE LIFTER -->
+                <div class="glass-card rounded-2xl p-4 text-center flex flex-col justify-between hover:border-blue-500/50">
+                    <div class="product-img-wrapper bg-gray-900/80 rounded-xl p-2 mb-3 overflow-hidden h-36 flex items-center justify-center">
+                        <!-- PRODUCT IMAGE URL HERE -->
+                        <img src="https://placehold.co/200x200/1e293b/38bdf8?text=Shoe+Lifter" alt="Shoe Lifter" class="max-h-full object-contain">
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Shoe Lifters</h3>
+                        <p class="text-xs text-gray-400 mt-1">Durable Footwear Accessories</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 7: ELASTIC -->
+                <div class="glass-card rounded-2xl p-4 text-center flex flex-col justify-between hover:border-blue-500/50">
+                    <div class="product-img-wrapper bg-gray-900/80 rounded-xl p-2 mb-3 overflow-hidden h-36 flex items-center justify-center">
+                        <!-- PRODUCT IMAGE URL HERE -->
+                        <img src="https://placehold.co/200x200/1e293b/38bdf8?text=Elastic" alt="Elastic" class="max-h-full object-contain">
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Elastic Roll</h3>
+                        <p class="text-xs text-gray-400 mt-1">Charlie Brand Elastic Bands</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 8: COTTON TAPE & GLOVES -->
+                <div class="glass-card rounded-2xl p-4 text-center flex flex-col justify-between hover:border-blue-500/50">
+                    <div class="product-img-wrapper bg-gray-900/80 rounded-xl p-2 mb-3 overflow-hidden h-36 flex items-center justify-center">
+                        <!-- PRODUCT IMAGE URL HERE -->
+                        <img src="https://placehold.co/200x200/1e293b/38bdf8?text=Gloves+%26+Cotton+Tape" alt="Gloves & Tape" class="max-h-full object-contain">
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Gloves & Cotton Tape</h3>
+                        <p class="text-xs text-gray-400 mt-1">Industrial Safety Gloves & Tapes</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ADDRESS & LOCATION FOOTER CARD -->
+        <section class="my-8">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border-l-4 border-yellow-400">
+                <div class="space-y-2 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-2 text-yellow-400 font-bold text-sm">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>OUR SHOP ADDRESS</span>
+                    </div>
+                    <p class="text-lg font-semibold text-white">
+                        Plot No. 894, Near Indian Petrol Pump, Firni Road, Village Pooth Khurd, Bawana, Delhi-110039
+                    </p>
+                    <p class="text-xs text-gray-400">Visit us for bulk wholesale rates and inquiries.</p>
+                </div>
+
+                <a href="https://maps.google.com/?q=Plot+No.+894,+Near+Indian+Petrol+Pump,+Firni+Road,+Village+Pooth+Khurd,+Bawana,+Delhi-110039" target="_blank" class="whitespace-nowrap bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition duration-300 flex items-center space-x-2">
+                    <i class="fa-solid fa-map-location-dot text-lg"></i>
+                    <span>Get Directions</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full text-center py-6 border-t border-gray-800 bg-gray-950/80">
+        <p class="text-xs text-gray-400">
+            &copy; <span id="current-year"></span> <strong class="text-yellow-400">OM TRADERS</strong>. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Set dynamic year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Thank you toast message after clicking Review or Payment links
+        document.getElementById('review-btn').addEventListener('click', function() {
+            console.log("Redirecting to Google Review/Map page...");
+        });
+    </script>
+</body>
+</html>
